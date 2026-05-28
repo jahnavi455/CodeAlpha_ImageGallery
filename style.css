@@ -1,0 +1,145 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+
+.buttons{
+    margin-bottom:20px;
+}
+
+.buttons button{
+    padding:10px 20px;
+    margin:5px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.buttons button:hover{
+    background:#555;
+    color:white;
+}
+
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+    opacity:0.8;
+}
+
+
+.lightbox{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+.lightbox-img{
+    width:80%;
+    max-width:700px;
+    border-radius:10px;
+}
+
+
+.close{
+    position:absolute;
+    top:20px;
+    right:40px;
+    color:white;
+    font-size:40px;
+    cursor:pointer;
+}
+
+
+.prev,
+.next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:white;
+    color:black;
+    border:none;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.prev{
+    left:20px;
+}
+
+.next{
+    right:20px;
+}
+
+.prev:hover,
+.next:hover{
+    background:#ccc;
+}
+
+
+@media(max-width:768px){
+
+    .lightbox-img{
+        width:95%;
+    }
+
+}
+body{
+    background: linear-gradient(to right, #000000, #1f1f1f);
+}
+
+.delete-btn{
+    position:absolute;
+    bottom:40px;
+    background:red;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    font-size:16px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.delete-btn:hover{
+    background:darkred;
+}
